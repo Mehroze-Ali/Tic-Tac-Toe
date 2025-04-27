@@ -1,0 +1,154 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+h1 {
+    font-size: 70px;
+    font-family: "Brush Script MT", cursive;
+    font-weight: lighter;
+}
+.winner p {
+    font-size: 0px;
+    font-family: "Brush Script MT", cursive;
+    font-weight: lighter;
+
+}
+body {
+    color: #F5EFFF;
+    background-color: #3B1E54;
+    text-align: center;
+}
+.head {
+    height: 100vh;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gamePart {
+    height: 100vh;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center ;
+}
+.game {
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    font-size: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15%;
+    color: #0b211e  ;
+    background-color: #CDC1FF;
+    box-shadow: (0,0,0,5);
+    transition: all .2s;
+}
+.box:hover{
+    scale: 1.05;
+}
+.newGameBtn , .rst{
+    position: relative;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: F5EFFF;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.newGameBtn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+    transform: skewX(45deg);
+    transition: all 0.5s ease;
+}
+.rst::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.4), rgba(255,255,255,0));
+    transform: skewX(45deg);
+    transition: all 0.5s ease;
+}
+
+.newGameBtn:hover {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+.rst:hover {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+.newGameBtn:hover::before{
+    left: 200%;
+}
+.rst:hover::before{
+    left: 200%;
+}
+
+
+.hide {
+    display: none;
+}
+
+.head h1 {
+    animation: fade-in .5s 1 linear ;
+}
+.newGameButton {
+    
+    animation: fade-in .3s 1 linear ;
+}
+.winner{
+    font-size: 25px;
+
+    animation: pop-up .5s  1 ;
+}
+
+@keyframes pop-up{
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 4;
+    }
+}
